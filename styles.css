@@ -1,0 +1,145 @@
+/* === RESET === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* === GLOBAL === */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: bold;
+  color: #222;
+}
+
+/* === NAVBAR === */
+.navbar {
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar.scrolled {
+  background-color: #222 !important;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+}
+
+/* === HEADER === */
+header {
+  background: url('plat-senegalais-Thieboudienne-676x320.jpg') no-repeat center center/cover;
+  height: 100vh;
+  position: relative;
+  h1 {color: #ccc;}
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+}
+
+header .container {
+  position: relative;
+  z-index: 2;
+}
+
+header h1 {
+  font-size: 3rem;
+  color: white; /* couleur du texte */
+  text-shadow: 2px 2px 10px rgb(0, 0, 0); /* ombre noire pour contraster */
+}
+
+
+header p {
+  font-size: 1.3rem;
+}
+
+/* === SECTIONS === */
+section {
+  padding: 60px 0;
+}
+
+section h2 {
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+section h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #e63946;
+  margin: 10px auto;
+  border-radius: 2px;
+}
+
+/* === OFFRES === */
+#offres h4 {
+  color: #e63946;
+  font-weight: bold;
+}
+#offres p {
+  color: #444;
+}
+
+/* === FORMULAIRES === */
+form input, form textarea {
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  padding: 12px;
+  transition: 0.3s;
+}
+
+form input:focus, form textarea:focus {
+  border-color: #e63946;
+  box-shadow: 0 0 8px rgba(230,57,70,0.4);
+  outline: none;
+}
+
+/* === BOUTONS === */
+.btn-primary, .btn-success {
+  background: #e63946;
+  border: none;
+  transition: 0.3s;
+}
+.btn-primary:hover, .btn-success:hover {
+  background: #d62839;
+  transform: scale(1.05);
+}
+
+/* === GALERIE === */
+#galerie img {
+  transition: transform 0.4s, box-shadow 0.3s;
+}
+#galerie img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+/* === TÉMOIGNAGES === */
+#temoignages p {
+  font-style: italic;
+  color: #555;
+}
+#temoignages em {
+  color: #e63946;
+  font-weight: bold;
+}
+
+/* === FOOTER === */
+footer {
+  background: #111;
+  color: #bbb;
+}
+footer p {
+  margin: 0;
+}

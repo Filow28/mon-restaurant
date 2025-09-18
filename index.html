@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="icon" type="image/png" href="Logo Épices de Dakar.png">
+
+  <title>Épices de Dakar</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <img src="Logo Épices de Dakar.png" alt="Logo Restaurant" width="50" height="50" class="d-inline-block align-text-top">
+      <a class="navbar-brand fw-bold" href="#">Épices de Dakar</a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#accueil">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#menuModal">Notre Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="#offres">Offres Spéciales</a></li>
+          <li class="nav-item"><a class="nav-link" href="#reservation">Réservation</a></li>
+          <li class="nav-item"><a class="nav-link" href="#galerie">Galerie</a></li>
+          <li class="nav-item"><a class="nav-link" href="#temoignages">Témoignages</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <header id="accueil" class="text-center text-white d-flex align-items-center justify-content-center">
+    <div class="container">
+      <h1 class="display-4 fw-bold">Bienvenue au Restaurant</h1>
+      <p class="lead">Savourez nos plats traditionnels et modernes</p>
+      <a href="#reservation" class="btn btn-primary btn-lg">Réserver une table</a>
+    </div>
+  </header>
+
+  <!-- OFFRES SPÉCIALES -->
+  <section id="offres" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Offres Spéciales</h2>
+      <div class="row">
+        <div class="col-md-4 text-center">
+          <h4>Menu du Jour</h4>
+          <p>Entrée + Plat + Dessert à 5000CFA</p>
+        </div>
+        <div class="col-md-4 text-center">
+          <h4>Promo Étudiant</h4>
+          <p>-20% sur présentation de la carte étudiante</p>
+        </div>
+        <div class="col-md-4 text-center">
+          <h4>Happy Hour</h4>
+          <p>Boissons à moitié prix de 17h à 19h</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RÉSERVATION -->
+  
+<section id="reservation" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">Réservation de Table</h2>
+    <form id="formReservation" class="row g-3" 
+          action="https://formspree.io/f/mqadvnbn" 
+          method="POST">
+
+      <!-- Nom -->
+      <div class="col-md-6">
+        <input type="text" class="form-control" id="name" name="nom" placeholder="Nom complet" required>
+      </div>
+
+      <!-- Email -->
+      <div class="col-md-6">
+        <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+      </div>
+
+      <!-- Date -->
+      <div class="col-md-4">
+        <input type="date" class="form-control" id="date" name="date" required>
+      </div>
+
+      <!-- Heure -->
+      <div class="col-md-4">
+        <input type="time" class="form-control" id="time" name="heure" required>
+      </div>
+
+      <!-- Personnes -->
+      <div class="col-md-4">
+        <input type="number" class="form-control" id="people" name="personnes" placeholder="Personnes" min="1" required>
+      </div>
+
+      <!-- Bouton -->
+      <div class="col-12">
+        <button type="submit" class="btn btn-success w-100">Réserver</button>
+      </div>
+    </form>
+
+    <!-- Message retour -->
+    <div id="resMessage" class="mt-3"></div>
+  </div>
+</section>
+
+
+  <!-- GALERIE -->
+<section id="galerie" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Galerie</h2>
+    <div class="row g-3">
+
+      <div class="col-md-3 col-6">
+        <figure>
+          <img src="Thieboudienne sn.jpg" class="img-fluid rounded" alt="Thiéboudienne">
+          <figcaption class="text-center mt-2">🐟Thiéboudienne – Le plat national du Sénégal, préparé avec du riz parfumé,<br> du poisson frais et des légumes mijotés dans une sauce tomate épicée.</figcaption>
+        </figure>
+      </div>
+
+      <div class="col-md-3 col-6">
+        <figure>
+          <img src="Yassa.webp" class="img-fluid rounded" alt="Yassa poulet">
+          <figcaption class="text-center mt-2">:
+
+🍗 Yassa Poulet – Un délicieux poulet mariné au citron et aux oignons,<br> mijoté lentement pour révéler toute la richesse des saveurs sénégalaises.</figcaption>
+        </figure>
+      </div>
+
+      <div class="col-md-3 col-6">
+        <figure>
+          <img src="Mafé.jpg" class="img-fluid rounded" alt="Mafé">
+          <figcaption class="text-center mt-2">🥘 Mafé – Un ragoût savoureux à base de viande et de légumes ,<br> emblématique de la cuisine ouest-africaine.</figcaption>
+        </figure>
+      </div>
+
+      <div class="col-md-3 col-6">
+        <figure>
+          <img src="vaprincipal_STYLE_Close-up_Shot_right_view__EMOTION_realistic_a_3780d46e-eb7d-4896-b2b1-564566fbed77-300x300 (1).png" class="img-fluid rounded" alt="Plat africain moderne">
+          <figcaption class="text-center mt-2">🌿 Ragoût de saucisses – De savoureuses saucisses mijotées avec des pommes de terre ,<br> des légumes  et des herbes fraîches, pour un plat généreux .</figcaption>
+        </figure>
+      </div>
+
+      <div class="col-md-3 col-6">
+        <figure>
+          <img src="side-view-pizza-with-chopped-pepper-board-cookware.jpg" class="img-fluid rounded" alt="Pizza">
+          <figcaption class="text-center mt-2">🍕 Pizza maison garnie de légumes – Une pâte croustillante faite maison, <br>recouverte d’une sauce savoureuse et généreusement garnie de légumes.</figcaption>
+        </figure>
+      </div>
+
+      <div class="col-md-3 col-6">
+        <figure>
+          <img src="tacos.webp" class="img-fluid rounded" alt="Tacos">
+          <figcaption class="text-center mt-2">🌮 Tacos – Des tortillas croustillantes garnies d’une farce savoureuse et relevée,<br> parfaites pour une pause gourmande.</figcaption>
+        </figure>
+      </div>
+
+      <div class="col-md-3 col-6">
+        <figure>
+          <img src="spaquetti bolo.png" class="img-fluid rounded" alt="Spaghetti Bolognaise">
+          <figcaption class="text-center mt-2">🍝 Spaghetti Bolognaise – Des pâtes al dente nappées d’une sauce tomate <br> onctueuse aux herbes et à la viande hachée.</figcaption>
+        </figure>
+      </div>
+
+      <div class="col-md-3 col-6">
+        <figure>
+          <img src="i200294-crepes-traditionnelles.jpg" class="img-fluid rounded" alt="Crêpes">
+          <figcaption class="text-center mt-2">🥞 Crêpes traditionnelles – Légères et dorées, servies nature <br> ou avec une touche sucrée, idéales pour un dessert gourmand.</figcaption>
+        </figure>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- TÉMOIGNAGES -->
+  <section id="temoignages" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Témoignages</h2>
+      <div id="carouselTemoignages" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner text-center">
+          <div class="carousel-item active">
+            <p>"Un service excellent et une nourriture délicieuse !"</p>
+            <em>- Cheikh</em>
+          </div>
+
+        
+
+
+          <div class="carousel-item">
+            <p>"Meilleur restaurant en ville, je recommande à 100%."</p>
+            <em>- Ali</em>
+          </div>
+          <div class="carousel-item">
+            <p>"Ambiance chaleureuse et plats savoureux."</p>
+            <em>- Aïcha</em>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselTemoignages" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselTemoignages" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Contact</h2>
+    <form id="formContact" class="row g-3" 
+          action="https://formspree.io/f/mqadvnbn" 
+          method="POST">
+
+      <!-- Nom -->
+      <div class="col-md-6">
+        <input type="text" class="form-control" name="nom" placeholder="Prénom et Nom" required>
+      </div>
+
+      <!-- Email -->
+      <div class="col-md-6">
+        <input type="email" class="form-control" name="email" placeholder="Email" required>
+      </div>
+
+      <!-- Message -->
+      <div class="col-12">
+        <textarea class="form-control" name="message" rows="4" placeholder="Message" required></textarea>
+      </div>
+
+      <!-- Bouton -->
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary w-100">Envoyer</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+
+  <section id="contact" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Information</h2>
+    <p class="text-center">📍 Adresse : Dakar, Sénégal</p>
+    <p class="text-center">📞 Téléphone : +221 77 123 45 67</p>
+    <p class="text-center">✉️ Email : Epicedkr@gmail.com</p>
+      <p class="text-center">🕒 Horaires : <br>
+      Lundi - Vendredi : 10h00 - 23h30 <br>
+      Samedi - Dimanche : 11h00 - 01h30 
+    </p>
+    <p class="text-center">
+      🔗 Suivez-nous :
+      <a href="https://facebook.com" target="_blank">Facebook</a> |
+      <a href="https://instagram.com" target="_blank">Instagram</a>
+    </p>
+  </div>
+</section>
+
+  
+  
+  
+  
+  
+  <!-- FOOTER -->
+  <footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2025 Épices de Dakar- Tous droits réservés</p>
+  </footer>
+
+
+<!-- MODAL MENU -->
+  <div class="modal fade" id="menuModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Notre Menu</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-6">
+              <h6>Plats traditionnels</h6>
+             <p style="display:flex; align-items:center; margin-bottom:20px;">
+  <img src="Yassa.webp" alt="Yassa Poulet" style="width:80px; height:80px; margin-right:15px; border-radius:8px;">
+  <span>
+    Yassa Poulet<br>
+    <strong>3000 FCFA</strong>
+  </span>
+</p>
+<p style="display:flex; align-items:center; margin-bottom:20px;">
+             <img src="Thieboudienne sn.jpg" alt="Thieboudienne" style="width:80px; height:80px; margin-right:15px; border-radius:8px;">
+  <span>
+    Thieboudienne<br>
+    <strong>2500 FCFA</strong>
+  </span>
+</p>
+             
+<p style="display:flex; align-items:center; margin-bottom:20px;">
+             <img src="Mafé.jpg" alt="Mafé" style="width:80px; height:80px; margin-right:15px; border-radius:8px;">
+  <span>
+    Mafé<br>
+    <strong>2000 FCFA</strong>
+  </span>
+</p>
+
+            </div>
+            <div class="col-md-6">
+              <h6>Plats modernes</h6>
+             <p style="display:flex; align-items:center; margin-bottom:20px;">
+  <img src="tacos.webp" alt="Tacos" style="width:80px; height:80px; margin-right:15px; border-radius:8px;">
+  <span>
+     Tacos<br>
+    <strong>3000 FCFA</strong>
+  </span>
+</p>
+
+<p style="display:flex; align-items:center; margin-bottom:20px;">
+  <img src="spaquetti bolo.png" alt="Spaghetti Bolognaise" style="width:80px; height:80px; margin-right:15px; border-radius:8px;">
+  <span>
+     Spaghetti Bolognaise<br>
+    <strong>2500 FCFA</strong>
+  </span>
+</p>
+              
+              <p style="display:flex; align-items:center; margin-bottom:20px;">
+  <img src="Pizza-Pepperoni-Mozzarella-Hot-Honey.jpg" alt=" Pizza" style="width:80px; height:80px; margin-right:15px; border-radius:8px;">
+  <span>
+      Pizza<br>
+    <strong>5000 FCFA</strong>
+  </span>
+</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
